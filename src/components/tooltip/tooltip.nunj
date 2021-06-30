@@ -1,0 +1,6 @@
+{% macro tooltip(props) %}
+<span class="tooltip{% if props.className %} {{ props.className }}{% endif %}">
+	<span class="tooltip__trigger">{{ props.trigger }}</span>
+	<span class="tooltip__text">{{ props.text }}</span>
+</span>
+{% endmacro %}

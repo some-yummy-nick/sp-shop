@@ -1,0 +1,80 @@
+{% from "../../components/button/button.nunj" import button %}
+{% from "../../components/tooltip/tooltip.nunj" import tooltip %}
+
+<div class="billing">
+	<div class="billing__inner">
+		<form class="billing__form">
+			<div class="billing__top">
+				<h1 class="billing__title">Billing Information</h1>
+				<div class="billing__radios">
+					<div class="billing__radio">
+						<input type="radio" value="credit-card" name="pay" id="credit card" class="visually-hidden" checked>
+						<label for="credit card">Pay with Credit Card</label>
+					</div>
+					<div class="billing__radio">
+						<input type="radio" value="paypal" name="pay" id="paypal" class="visually-hidden">
+						<label for="paypal"><img src="/assets/images/paypal.svg" alt="paypal"></label>
+					</div>
+				</div>
+			</div>
+			<div class="billing__wrapper">
+				<div class="billing__field">
+					<label class="billing__label" for="name">Name on card</label>
+					<input class="billing__input billing__input_wide" name="name" id="name" type="text"
+						   placeholder="Placeholder Text">
+				</div>
+				<div class="billing__field billing__field_more">
+					<label class="billing__label" for="number-1">Card number</label>
+					<input class="billing__input" name="number-1" id="number-1" type="text">
+					<input class="billing__input" name="number-2" id="number-2" type="text">
+					<input class="billing__input" name="number-3" id="number-3" type="text">
+					<input class="billing__input" name="number-4" id="number-4" type="text">
+				</div>
+				<div class="billing__fields">
+					<div class="billing__field">
+						<label class="billing__label" for="expire">Expire date</label>
+						<input class="billing__input" name="expire" id="expire" type="text">
+					</div>
+					<div class="billing__field">
+						<div class="billing__has-tooltip">
+							<label class="billing__label" for="cvv">CVV code</label>
+							{{ tooltip({
+							trigger: '?',
+							text: 'some text'
+							}) }}
+						</div>
+						<input class="billing__input" name="cvv" id="cvv" type="text">
+					</div>
+				</div>
+			</div>
+			<div class="billing__bottom">
+				<div class="billing__checkboxes">
+					<div class="billing__checkbox">
+						<input type="checkbox" name="save" id="save" class="visually-hidden" checked>
+						<label for="save">Save information of this credit card</label>
+					</div>
+					<div class="billing__checkbox">
+						<input type="checkbox" name="accept" id="accept" class="visually-hidden">
+						<label for="accept">I accept the&nbsp;<a href="">terms and conditions</a>&nbsp;and the&nbsp;<a
+								href="">Privacy
+							Policies</a>
+						</label>
+					</div>
+				</div>
+				<div class="billing__buttons">
+					{{ button({
+					className: 'button button_border',
+					children: 'Back',
+					type: 'button'
+					}) }}
+
+					{{ button({
+					className: 'button button_primary',
+					children: 'Check Out',
+					type: 'submit'
+					}) }}
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

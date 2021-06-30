@@ -1,4 +1,78 @@
 .header {
-	padding: 20px 0;
-	background: #ccc;
+	position: relative;
+	z-index: 1;
+	padding: 20px 30px;
+	border-bottom: 1px solid #cfcfcf;
+	background-color: #fff;
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__logo {
+		&:hover {
+			fill: $primary-color;
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		align-items: center;
+	}
+
+	&__button {
+		background-color: transparent;
+		border: 1px solid transparent;
+
+		&:hover {
+			fill: $primary-color;
+		}
+
+		svg {
+			background-color: transparent;
+		}
+	}
+
+	&__search {
+		margin-right: 25px;
+	}
+
+	&__cart {
+		position: relative;
+	}
+
+	&__count {
+		position: absolute;
+		top: -5px;
+		right: -5px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 13px;
+		height: 13px;
+		background-color: $primary-color;
+		border-radius: 100%;
+		color: #fff;
+		font-size: 10px;
+	}
+
+	&__hamburger {
+		display: none;
+	}
+
+	@include ipad {
+		&__cart {
+			margin-right: 25px;
+		}
+
+		&__hamburger {
+			display: block;
+
+			&:hover {
+				fill: #000;
+			}
+		}
+	}
 }

@@ -6,10 +6,16 @@
 @import 'global';
 @import 'layout';
 // @import 'controls';
+@import 'tooltip';
 
 // ======= COMPONENTS =======
-@import '../../components/header/header';
 @import '../../components/button/button';
+@import '../../components/header/header';
+@import '../../components/menu/menu';
+@import '../../components/main/main';
+@import '../../components/stages/stages';
+@import '../../components/billing/billing';
+@import '../../components/sidebar/sidebar';
 
 // ======= PAGES =======
 @import 'pages/main';

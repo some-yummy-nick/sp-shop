@@ -1,0 +1,23 @@
+$margin-menu: 30px;
+
+.menu {
+	&__list {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		margin-left: -$margin-menu;
+	}
+
+	&__item {
+		margin-left: $margin-menu;
+	}
+
+	&__link {
+		text-decoration: none;
+		font-size: 14px;
+
+		&:hover {
+			color: $primary-color;
+		}
+	}
+}

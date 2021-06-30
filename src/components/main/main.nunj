@@ -1,0 +1,4 @@
+<main class="main">
+	{% include '../../components/stages/stages.nunj' %}
+	{% include '../../components/billing/billing.nunj' %}
+</main>
