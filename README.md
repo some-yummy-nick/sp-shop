@@ -1,4 +1,6 @@
 # Sp-shop
+![screenshot](https://github.com/some-yummy-nick/sp-shop/blob/master/some-yummy-sp-shop.png)
+
 [Макет](https://www.figma.com/file/IWHyNlQtYYrsTwpal6IUPY/HTML-Test?node-id=449%3A11)
 
 [Результат](https://some-yummy-sp-shop.netlify.app/)
