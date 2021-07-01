@@ -5,13 +5,14 @@
 		<h2 class="sidebar__title">My basket</h2>
 		<div class="sidebar__items">
 			{% for basketItem in basket %}
-				{{ item({
-					img: basketItem.img,
-					title: basketItem.title,
-					price: basketItem.price
-				}) }}
+			{{ item({
+			img: basketItem.img,
+			title: basketItem.title,
+			price: basketItem.price
+			}) }}
 			{% endfor %}
 		</div>
+		<div class="sidebar__empty" id="js-empty">The basket is empty</div>
 	</div>
 	<div class="sidebar__middle">
 		<h2 class="sidebar__title">Promo code</h2>
@@ -20,19 +21,19 @@
 	<div class="sidebar__bottom">
 		<div class="sidebar__line">
 			<div class="sidebar__prop">Subtotal</div>
-			<div class="sidebar__value">$1 050</div>
+			<div class="sidebar__value">$<span id="js-subtotal">1 050</span></div>
 		</div>
 		<div class="sidebar__line">
 			<div class="sidebar__prop">Tax</div>
-			<div class="sidebar__value">$100</div>
+			<div class="sidebar__value">$<span id="js-tax">100</span></div>
 		</div>
 		<div class="sidebar__line">
 			<div class="sidebar__prop">Shipping</div>
-			<div class="sidebar__value">$150</div>
+			<div class="sidebar__value">$<span id="js-shipping">150</span></div>
 		</div>
 		<div class="sidebar__line sidebar__line_bold sidebar__line_more">
 			<div class="sidebar__prop">Total</div>
-			<div class="sidebar__value">$1 300</div>
+			<div class="sidebar__value">$<span id="js-total">1 300</span></div>
 		</div>
 	</div>
 </aside>

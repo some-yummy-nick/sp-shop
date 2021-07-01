@@ -1,12 +1,12 @@
 <div class="change">
 	<div class="change__wrapper">
-		<button type="button" class="change__button change__minus">
+		<button type="button" class="change__button change__minus js-item-minus">
 			<svg width="21" height="20">
 				<use xlink:href="#icon-minus"></use>
 			</svg>
 		</button>
-		<div class="change__number">1</div>
-		<button type="button" class="change__button change__plus">
+		<div class="change__number js-item-number">1</div>
+		<button type="button" class="change__button change__plus js-item-plus">
 			<svg width="21" height="20">
 				<use xlink:href="#icon-plus"></use>
 			</svg>

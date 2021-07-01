@@ -22,7 +22,7 @@
 					<svg width="24" height="21">
 						<use xlink:href="#icon-cart"></use>
 					</svg>
-					<span class="header__count">2</span>
+					<span class="header__count" id="js-basket-count">2</span>
 				</button>
 				<button class="header__button header__hamburger" type="button" id="js-hamburger">
 					<svg width="29" height="22" class="header__hamburger-open">

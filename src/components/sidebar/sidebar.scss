@@ -5,11 +5,11 @@
 	border-left: 1px solid #cfcfcf;
 
 	&::after {
-		content: "";
+		content: '';
 		position: absolute;
 		display: block;
 		left: -1px;
-		width:1px;
+		width: 1px;
 		height: 100%;
 		background-color: #cfcfcf;
 	}
@@ -48,6 +48,14 @@
 		}
 	}
 
+	&__empty {
+		display: none;
+
+		&.active {
+			display: block;
+		}
+	}
+
 	@include ipad {
 		position: absolute;
 		min-width: 0;
@@ -78,15 +86,14 @@
 		border-right: 1px solid #cfcfcf;
 
 		&::before {
-			content: "";
+			content: '';
 			position: absolute;
 			display: block;
 			top: 100%;
 			right: -1px;
-			width:1px;
+			width: 1px;
 			height: 100%;
 			background-color: #cfcfcf;
 		}
-
 	}
 }

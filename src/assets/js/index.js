@@ -6,6 +6,10 @@ import 'regenerator-runtime/runtime';
 
 import { gsap } from 'gsap';
 
+import hamburger from 'modules/hamburger';
+import cart from 'modules/cart';
+import basket from 'modules/basket';
+
 // import { ScrollToPlugin } from 'gsap/ScrollToPlugin.js';
 // gsap.registerPlugin(ScrollToPlugin);
 
@@ -27,36 +31,14 @@ class ProjectApp {
 		this.modules = {};
 		document.addEventListener('DOMContentLoaded', () => {
 			document.documentElement.classList.remove('_loading');
+			hamburger();
+			cart();
+			basket();
 		});
 	}
 }
 
 global.ProjectApp = new ProjectApp();
-
-const hamburger = document.getElementById('js-hamburger');
-const cart = document.getElementById('js-cart');
-const aside = document.getElementById('js-sidebar');
-const menu = document.getElementById('js-header-menu');
-
-function handleCartClick() {
-	aside.classList.toggle('active');
-	cart.classList.toggle('active');
-}
-
-function handleHamburgerClick() {
-	hamburger.classList.toggle('active');
-	menu.classList.toggle('active');
-}
-
-cart.addEventListener('click', handleCartClick);
-hamburger.addEventListener('click', handleHamburgerClick);
-
-if (module.hot) {
-	module.hot.dispose(() => {
-		cart.removeEventListener('click', handleCartClick);
-		hamburger.removeEventListener('click', handleHamburgerClick);
-	});
-}
 
 if (module.hot) {
 	module.hot.accept();

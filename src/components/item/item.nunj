@@ -8,10 +8,10 @@
 			<div class="item__title">{{props.title}}</div>
 			<div class="item__change">
 				{% include '../../components/change/change.nunj' %}
-				<div class="item__price">$ {{props.price}}</div>
+				<div class="item__price">$ <span class="js-item-price" data-price="{{props.price}}">{{props.price}}</span></div>
 			</div>
 		</div>
-		<button class="item__close" type="button">
+		<button class="item__close js-item-remove" type="button">
 			<svg width="19" height="18">
 				<use xlink:href="#icon-close"></use>
 			</svg>

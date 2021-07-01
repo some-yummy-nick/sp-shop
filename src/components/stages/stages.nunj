@@ -1,10 +1,18 @@
 <div class="stages">
 	{% for item in stages %}
-	<div class="stages__item{% if item.status == 'past' %} stages__item_past{% elif item.status == 'current' %} stages__item_current{% else %} stages__item_next{% endif %}">
-			<div class="stages__inner">
-				<div class="stages__number">{{loop.index}}</div>
-				<div class="stages__text">{{item.name}}</div>
-			</div>
+	<div class="stages__item
+	{% if item.status == 'past' %}stages__item_past
+	{% elif item.status == 'current' %}stages__item_current
+	{% else %} stages__item_next{% endif %}">
+			<div class="stages__number">{{loop.index}}</div>
+			<div class="stages__text">{{item.name}}</div>
 	</div>
+		{% if loop.last %}
+			{% else %}
+			<div class="stages__line
+			{% if item.status == 'past' %}stages__line_past
+			{% elif item.status == 'current' %}stages__line_current
+			{% endif %}"></div>
+		{% endif %}
 	{% endfor %}
 </div>
