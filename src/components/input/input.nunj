@@ -1,0 +1,9 @@
+{% macro input(props) %}
+<input class="input{% if props.className %} {{ props.className }}{% endif %}"
+	   type="{% if props.type %}{{ props.type }}{% else %}text{% endif %}"
+	   {% if props.value %}value="{{ props.value }}"{% endif %}
+	   name="{{ props.name }}"
+	   {% if props.id %}id="{{ props.id }}"{% endif %}
+	   {% if props.checked %}checked{% endif %}
+	   {% if props.placeholder %}placeholder="{{ props.placeholder }}"{% endif %}>
+{% endmacro %}

@@ -1,7 +1,7 @@
 .header {
 	position: relative;
 	z-index: 1;
-	padding: 20px 30px;
+	padding: 21px 30px;
 	border-bottom: 1px solid #cfcfcf;
 	background-color: #fff;
 
@@ -65,13 +65,72 @@
 	@include ipad {
 		&__cart {
 			margin-right: 25px;
+
+			&:hover {
+				fill: #000;
+			}
+
+			&.active {
+				fill: $primary-color;
+			}
+		}
+
+		&__wrapper {
+			background-color: #fff;
+			z-index: 1;
+		}
+
+		&__menu {
+			position: absolute;
+			right: -100%;
+			transition: right $default-transition-duration;
+			opacity: 0;
+
+			&.active {
+				top: 80px;
+				right: 0;
+				width: 100%;
+				z-index: 2;
+				background-color: #fff;
+				border-bottom: 1px solid #cfcfcf;
+				opacity: 1;
+			}
 		}
 
 		&__hamburger {
 			display: block;
+			position: relative;
+			min-width: 29px;
+			min-height: 22px;
 
 			&:hover {
 				fill: #000;
+			}
+
+			&.active {
+				fill: $primary-color;
+
+				.header__hamburger-close {
+					transform: translateX(-50%) translateY(-50%) scale(1);
+				}
+
+				.header__hamburger-open {
+					transform: translateX(-50%) translateY(-50%) scale(0);
+				}
+			}
+
+			&-close,
+			&-open {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translateX(-50%) translateY(-50%);
+				transition: fill $default-transition-duration, stroke $default-transition-duration,
+				transform $default-transition-duration;
+			}
+
+			&-close {
+				transform: scale(0);
 			}
 		}
 	}

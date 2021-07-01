@@ -1,16 +1,14 @@
 {% extends "../ext/base.nunj" %}
 
-{% from "../../components/menu/menu.nunj" import menu %}
 {% block title %}{{ super() }} | Home{% endblock title %}
 
 {% block content %}
 
 {% include '../../components/header/header.nunj' %}
 
-<div class="container">
-	<div class="content">
-		{% include '../../components/main/main.nunj' %}
-		{% include '../../components/sidebar/sidebar.nunj' %}
-	</div>
+<div class="content">
+	{% include '../../components/main/main.nunj' %}
+	{% include '../../components/sidebar/sidebar.nunj' %}
 </div>
+
 {% endblock content %}

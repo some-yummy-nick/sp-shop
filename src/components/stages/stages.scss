@@ -75,6 +75,18 @@
 		display: block;
 	}
 
+	@include ipad {
+		width: calc(100% + 25vw - 60px);
+	}
+
+	@include min-screen(1025px) {
+		&__number {
+			&::after {
+				left: 63%;
+			}
+		}
+	}
+
 	@include min-screen($large-desktop) {
 		width: calc(100% + 25vw - 60px - 40px);
 	}
@@ -82,7 +94,7 @@
 	@include min-screen(1400px) {
 		&__number {
 			&::after {
-				left: 60%;
+				left: 58%;
 			}
 		}
 	}
@@ -90,7 +102,7 @@
 	@include min-screen(1600px) {
 		&__number {
 			&::after {
-				left: 58%;
+				left: 57%;
 			}
 		}
 	}

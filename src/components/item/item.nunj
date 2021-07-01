@@ -1,0 +1,21 @@
+{% macro item(props) %}
+<div class="item">
+	<div class="item__wrapper">
+		<div class="item__img">
+			<img src="/assets/images/{{props.img}}" alt="">
+		</div>
+		<div class="item__desc">
+			<div class="item__title">{{props.title}}</div>
+			<div class="item__change">
+				{% include '../../components/change/change.nunj' %}
+				<div class="item__price">$ {{props.price}}</div>
+			</div>
+		</div>
+		<button class="item__close" type="button">
+			<svg width="19" height="18">
+				<use xlink:href="#icon-close"></use>
+			</svg>
+		</button>
+	</div>
+</div>
+{% endmacro %}

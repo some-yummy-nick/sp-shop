@@ -1,3 +1,38 @@
+{% from "../../components/item/item.nunj" import item %}
+
 <aside class="sidebar" id="js-sidebar">
-	<h2 class="sidebar__title">My basket</h2>
+	<div class="sidebar__top">
+		<h2 class="sidebar__title">My basket</h2>
+		<div class="sidebar__items">
+			{% for basketItem in basket %}
+				{{ item({
+					img: basketItem.img,
+					title: basketItem.title,
+					price: basketItem.price
+				}) }}
+			{% endfor %}
+		</div>
+	</div>
+	<div class="sidebar__middle">
+		<h2 class="sidebar__title">Promo code</h2>
+		{% include '../../components/promo/promo.nunj' %}
+	</div>
+	<div class="sidebar__bottom">
+		<div class="sidebar__line">
+			<div class="sidebar__prop">Subtotal</div>
+			<div class="sidebar__value">$1 050</div>
+		</div>
+		<div class="sidebar__line">
+			<div class="sidebar__prop">Tax</div>
+			<div class="sidebar__value">$100</div>
+		</div>
+		<div class="sidebar__line">
+			<div class="sidebar__prop">Shipping</div>
+			<div class="sidebar__value">$150</div>
+		</div>
+		<div class="sidebar__line sidebar__line_bold sidebar__line_more">
+			<div class="sidebar__prop">Total</div>
+			<div class="sidebar__value">$1 300</div>
+		</div>
+	</div>
 </aside>

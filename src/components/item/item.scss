@@ -1,0 +1,62 @@
+.item {
+	&:not(:last-child) {
+		margin-bottom: 40px;
+	}
+
+	&__wrapper {
+		display: flex;
+		align-items: flex-start;
+	}
+
+	&__img {
+		max-width: 100px;
+		margin-right: 12px;
+
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	&__desc {
+		max-width: 150px;
+	}
+
+	&__title {
+		margin-bottom: 15px;
+		min-height: 33px;
+		max-height: 34px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+	}
+
+	&__change {
+		display: flex;
+		align-items: center;
+	}
+
+	&__price {
+		margin-left: 25px;
+	}
+
+	&__close {
+		margin-left: auto;
+		padding: 0;
+		border: 1px solid transparent;
+		background-color: transparent;
+		fill: #cfcfcf;
+
+		&:hover {
+			fill: #000;
+		}
+	}
+
+	@include ipad {
+		&__img {
+			max-width: 70px;
+		}
+	}
+}

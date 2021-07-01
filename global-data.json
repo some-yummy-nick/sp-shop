@@ -42,14 +42,16 @@
 		"status": "next"
 	  }
 	],
-	"someData": [
+	"basket": [
 		{
-			"title": "Item 1",
-			"text": "Desc 1"
+			"title": "Amet minim mollit non deserunt ullamco est sit",
+			"img": "jacket.png",
+			"price": "525"
 		},
 		{
-			"title": "Item 2",
-			"text": "Desc 2"
+			"title": "Amet minim mollit non",
+			"img": "nike.png",
+		    "price": "525"
 		}
 	]
 }

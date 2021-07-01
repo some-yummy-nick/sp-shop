@@ -1,0 +1,11 @@
+.promo {
+	&__wrapper {
+		display: flex;
+		align-items: center;
+	}
+
+	&__input {
+		flex-grow: 1;
+		margin-right: 10px;
+	}
+}

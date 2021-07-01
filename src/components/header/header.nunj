@@ -1,3 +1,4 @@
+{% from "../../components/menu/menu.nunj" import menu %}
 <div class="header">
 	<div class="container">
 		<div class="header__wrapper">
@@ -8,7 +9,7 @@
 					</svg>
 				</a>
 			</div>
-			<div class="header__menu">
+			<div class="header__menu" id="js-header-menu">
 				{{ menu() }}
 			</div>
 			<div class="header__buttons">
@@ -17,15 +18,18 @@
 						<use xlink:href="#icon-search"></use>
 					</svg>
 				</button>
-				<button class="header__button header__cart" type="button">
+				<button class="header__button header__cart" id="js-cart" type="button">
 					<svg width="24" height="21">
 						<use xlink:href="#icon-cart"></use>
 					</svg>
 					<span class="header__count">2</span>
 				</button>
 				<button class="header__button header__hamburger" type="button" id="js-hamburger">
-					<svg width="29" height="22">
+					<svg width="29" height="22" class="header__hamburger-open">
 						<use xlink:href="#icon-hamburger"></use>
+					</svg>
+					<svg width="19" height="18" class="header__hamburger-close">
+						<use xlink:href="#icon-close"></use>
 					</svg>
 				</button>
 			</div>

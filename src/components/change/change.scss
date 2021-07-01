@@ -1,0 +1,23 @@
+.change {
+	&__wrapper {
+		display: flex;
+		align-items: center;
+	}
+
+	&__number {
+		min-width: 20px;
+		margin: 0 10px;
+		text-align: center;
+	}
+
+	&__button {
+		display: flex;
+		padding: 0;
+		background-color: transparent;
+		border: 1px solid transparent;
+
+		&:hover {
+			fill: $primary-color;
+		}
+	}
+}

@@ -1,4 +1,5 @@
 {% from "./_head-scripts.nunj" import headScripts %}
+
 <!DOCTYPE html>
 <html>
 	<head>

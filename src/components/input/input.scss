@@ -1,0 +1,15 @@
+.input {
+	padding: 12px 10px;
+	background-color: #ededf1;
+	border-radius: 3px;
+	border: none;
+	font-size: 14px;
+
+	&:hover{
+		opacity: 0.8;
+	}
+
+	@include placeholder {
+		color: #8e90a6;
+	}
+}

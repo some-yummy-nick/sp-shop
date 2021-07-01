@@ -20,4 +20,18 @@ $margin-menu: 30px;
 			color: $primary-color;
 		}
 	}
+
+	@include ipad {
+		&__list {
+			flex-direction: column;
+			margin-left: 0;
+		}
+
+		&__item{
+			margin-left: 0;
+			width: 100%;
+			text-align: center;
+			padding: 15px;
+		}
+	}
 }

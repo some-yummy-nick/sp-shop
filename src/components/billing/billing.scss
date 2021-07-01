@@ -1,8 +1,9 @@
 .billing {
 	display: flex;
 
-	&__form {
-		min-width: 660px;
+	&__inner {
+		width: 100%;
+		max-width: 660px;
 	}
 
 	&__top {
@@ -144,16 +145,6 @@
 	}
 
 	&__input {
-		padding: 12px 10px;
-		background-color: #ededf1;
-		border-radius: 3px;
-		border: none;
-		font-size: 14px;
-
-		@include placeholder {
-			color: #8e90a6;
-		}
-
 		&_wide {
 			width: 100%;
 		}

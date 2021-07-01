@@ -1,29 +1,92 @@
 .sidebar {
-	position: sticky;
-	right: 0;
-	top: 0;
-	padding: 40px;
+	position: relative;
 	min-width: 410px;
-	height: 100vh;
+	height: 100%;
 	border-left: 1px solid #cfcfcf;
 
+	&::after {
+		content: "";
+		position: absolute;
+		display: block;
+		left: -1px;
+		width:1px;
+		height: 100%;
+		background-color: #cfcfcf;
+	}
+
+	&__top,
+	&__middle {
+		padding: 40px;
+		border-bottom: 1px solid #cfcfcf;
+	}
+
 	&__title {
+		margin-bottom: 30px;
 		font-size: 18px;
 		font-weight: 700;
 	}
 
+	&__bottom {
+		padding: 40px;
+	}
+
+	&__line {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
+
+		&_bold {
+			font-weight: 700;
+		}
+
+		&_more {
+			font-size: 18px;
+		}
+	}
+
 	@include ipad {
+		position: absolute;
 		min-width: 0;
 		width: 0;
 		padding: 0;
 		border-left: none;
+		opacity: 0;
+		transition: width $default-transition-duration, min-width $default-transition-duration;
 
 		&.active {
-			min-width: 410px;
-			width: auto;
-			padding: 40px;
+			top: 0;
+			right: 0;
+			height: 100%;
+			min-width: 360px;
 			border-left: 1px solid #cfcfcf;
 			background-color: #fff;
+			opacity: 1;
 		}
+
+		&__top,
+		&__middle,
+		&__bottom {
+			padding: 25px;
+		}
+	}
+
+	@include min-screen(2000px) {
+		border-right: 1px solid #cfcfcf;
+
+		&::before {
+			content: "";
+			position: absolute;
+			display: block;
+			top: 100%;
+			right: -1px;
+			width:1px;
+			height: 100%;
+			background-color: #cfcfcf;
+		}
+
 	}
 }
